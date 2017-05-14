@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  WKBrowser
+
+  Created by dali on 11/04/2017.
+  Copyright © 2017 itdali. All rights reserved.
+*/
+
+CFBundleDisplayName = "WK Browser";
+
+NSPhotoLibraryUsageDescription = "'WK Browser' Would Like to Access Your Photos";
+
+NSCameraUsageDescription = "'WK Browser' Would Like to Access Your Camera";

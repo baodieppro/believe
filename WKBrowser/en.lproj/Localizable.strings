@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  WKBrowser
+
+  Created by dali on 11/04/2017.
+  Copyright © 2017 itdali. All rights reserved.
+*/
+
+/* Show error link */
+"Browser.errorLink" = "The link is wrong!";
+
+/* Placeholder text shown in title bar while open a blank page */
+"Title.placeholderText" = "Search or enter address";
+
+/* Placeholder text shown in url bar before input */
+"URL.placeholderText" = "Search or enter address";
+
+/* NavigationBar title shown in history page */
+"History.navigationBarTitle" = "History";
+
+/* Segmented Controller Title 'bookmark' in WebsiteManageView */
+"Website.segmentedCtrlBookmarkTitle" = "bookmark";
+
+/* Segmented Controller Title 'history' in WebsiteManageView */
+"Website.segmentedCtrlHistoryTitle" = "history";
+
+/* Clear button title in history page */
+"History.clearBtnTitle" = "Clear";

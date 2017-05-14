@@ -12,10 +12,39 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private static let prefIntroDone = "IntroDone"
+    private static let prefIntroVersion = 2
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        #if DEVELOPMENT
+            DLprint("This is Development Version")
+        #else
+            DLprint("This is Production Version")
+        #endif
+        
+        SQLiteManager.share.connect()
+        
+        DLprint(Paths.documents)
+        
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let browserRootVC = WKBrowserViewController()
+        window?.rootViewController = browserRootVC
+        window?.makeKeyAndVisible()
+        
+        
+        if UserDefaults.standard.integer(forKey: AppDelegate.prefIntroDone) < AppDelegate.prefIntroVersion {
+            UserDefaults.standard.set(AppDelegate.prefIntroVersion, forKey: AppDelegate.prefIntroDone)
+            
+            // Show the first run UI asynchronously to avoid the "unbalanced calls to begin/end appearance transitions" warning.
+            DispatchQueue.main.async {
+                let introViewController = IntroductionViewController()
+                browserRootVC.present(introViewController, animated: false, completion: nil)
+            }
+        }
+        
         return true
     }
 
