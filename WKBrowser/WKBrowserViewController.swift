@@ -127,7 +127,7 @@ class WKBrowserViewController: UIViewController,
          }*/
         
         // load page in localhost - Apache
-        let strUrl: String = "https://www.baidu.com"
+        //let strUrl: String = "https://www.baidu.com"
         //let strUrl: String = "http://localhost/H5/page/WKWebView.html"
         //loadURL(with: strUrl)
     }

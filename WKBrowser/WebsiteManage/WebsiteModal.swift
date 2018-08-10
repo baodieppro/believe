@@ -15,6 +15,7 @@ class WebsiteModal: NSObject {
     var date: String = ""
     
     init(id: Int, title: String, url: String, date: String){
+        super.init()
         self.id = id
         self.title = title
         self.url = url
